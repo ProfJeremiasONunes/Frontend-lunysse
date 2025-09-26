@@ -21,6 +21,7 @@ import { DashboardPaciente } from '../pages/DashboardPaciente';
 import { ChatIA } from '../pages/ChatIA';
 import { Paciente } from '../pages/Pacientes';
 import { SessaoDetalhes } from '../pages/SessaoDetalhes';
+import { PacienteDetalhes } from '../pages/PacienteDetalhe';
 
 
 /* ==============================
@@ -122,6 +123,11 @@ export const AppRoutes = () => {
         <Route path="/pacientes" element={
           <ProtectedRoute>
             <Paciente /> 
+          </ProtectedRoute>
+        } />
+        <Route path="/pacientes/:id" element={
+          <ProtectedRoute>
+            <PacienteDetalhes /> {/* Página de detalhes de paciente específico */}
           </ProtectedRoute>
         } />
          <Route path="/sessao/:sessionId" element={
