@@ -20,6 +20,7 @@ import { DashboardPsicologo } from '../pages/DashboardPsicologo';
 import { DashboardPaciente } from '../pages/DashboardPaciente';
 import { ChatIA } from '../pages/ChatIA';
 import { Paciente } from '../pages/Pacientes';
+import { SessaoDetalhes } from '../pages/SessaoDetalhes';
 
 
 /* ==============================
@@ -121,6 +122,11 @@ export const AppRoutes = () => {
         <Route path="/pacientes" element={
           <ProtectedRoute>
             <Paciente /> 
+          </ProtectedRoute>
+        } />
+         <Route path="/sessao/:sessionId" element={
+          <ProtectedRoute>
+            <SessaoDetalhes /> {/* Detalhes de sessão específica */}
           </ProtectedRoute>
         } />
       </Routes>
